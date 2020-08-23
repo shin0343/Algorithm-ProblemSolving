@@ -37,6 +37,5 @@ int main() {
 		cout << maxBid - (totalBid - maxBid);
 	}
 
-
 	return 0;
 }
