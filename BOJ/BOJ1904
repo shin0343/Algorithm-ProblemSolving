@@ -1,0 +1,37 @@
+//https://www.acmicpc.net/problem/1904
+#include <iostream>
+using namespace std;
+
+#define INF 15746
+
+int N;
+int Ans;
+int DP[1000001];
+
+void solve()
+{
+    DP[1] = 1;
+    DP[2] = 2;
+
+    for (int i = 3; i <= N; i++)
+    {
+        DP[i] = (DP[i - 1] + DP[i - 2]) % INF;
+    }
+
+    Ans = DP[N];
+}
+
+int main()
+{
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+
+    cin >> N;
+
+    solve();
+
+    cout << Ans;
+
+    return 0;
+}
