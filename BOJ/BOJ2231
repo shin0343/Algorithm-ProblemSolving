@@ -1,0 +1,37 @@
+//https://www.acmicpc.net/problem/2231
+#include <iostream>
+using namespace std;
+
+int N;
+int ans;
+
+void solve()
+{
+    for (int i = 0; i < N; i++)
+    {
+        int tmpN = i;
+        int tmpI = i;
+        while (tmpI % 10 > 0)
+        {
+            tmpN += tmpI % 10;
+            tmpI /= 10;
+        }
+
+        if (tmpN == N)
+        {
+            ans = i;
+            break;
+        }
+    }
+}
+
+int main()
+{
+    cin >> N;
+
+    solve();
+
+    cout << ans;
+
+    return 0;
+}
