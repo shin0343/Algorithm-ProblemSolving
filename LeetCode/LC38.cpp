@@ -4,11 +4,11 @@
 #include <iostream>
 using namespace std;
 
-string nMemo[31];
 string Ans;
 
 class Solution {
 public:
+
     void dfs(string cas, int cnt, int n)
     {
         if(cnt>=n)
