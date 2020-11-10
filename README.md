@@ -1,10 +1,10 @@
 # Algorithm:: Problem Solving
 
+---
 
 
 ## LeetCode
 
----
 
 - [#69 sqrtx](https://github.com/shin0343/Algorithm-ProblemSolving/blob/master/LeetCode/LC%2069.cpp)
 - [#1 two-sum](https://github.com/shin0343/Algorithm-ProblemSolving/blob/master/LeetCode/LC1.cpp)
