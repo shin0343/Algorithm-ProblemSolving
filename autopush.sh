@@ -1,12 +1,22 @@
 #!/bin/bash
 
-commitContents=$1
+commitMsg=$1
 
-git add *
+if [ $# -eq 1 ]
+then
+	git add *
+fi
+
+if [ $# -eq 2 ]
+then
+	commitContent=$2
+	git add ./${commitContent}
+fi
+
 echo -e "\033[43;31mGit Add is completed!!\033[0m"
 
-git commit -m "${commitContents}"
-echo -e "\033[43;31mGit Commit is completed!! = ${commitContents}\033[0m"
+git commit -m "${commitMsg}"
+echo -e "\033[43;31mGit Commit is completed!! = ${commitMsg}\033[0m"
 
 git push origin master
 echo -e "\033[43;31mGit Push is completed!!\033[0m"
