@@ -48,7 +48,7 @@ public:
             rq.push(rn->left);
         }
 
-        if (lq.empty() && !rq.empty() || (!lq.empty() && rq.empty()))
+        if ((lq.empty() && !rq.empty()) || (!lq.empty() && rq.empty()))
             ans = false;
 
         return ans;
